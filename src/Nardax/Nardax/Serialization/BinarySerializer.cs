@@ -8,7 +8,8 @@ namespace Nardax.Serialization
         //Serialisera ett värde av valfri typ.
 
         public byte[] Serialize(T value)
-        {
+        {xxxxxxxxxxxxxxxxxxxxxxxx
+                xxxxxxxxxxxxxxxxxxxxxxxx
             using (var stream = new MemoryStream())
             {
                 var binaryFormatter = new BinaryFormatter();

@@ -8,27 +8,10 @@ namespace Nardax.Tests
     public class AsseblyExtensionsTests
     {
         [TestMethod]
-        public void GetAppSettingsValue_ValidKey_ReturnsValue()
-        {
-            var validKey = "ValidKey";
-            var expectedAppSettingVlaue = "SomeValue";
+        public void GetAppSettingsValue_ValidKey_Returnyyyyyyyyyyyyy
+            yyyyyyyyyyyyyyyyy
 
-            var assembly = Assembly.GetExecutingAssembly();
-            var actualAppSettingValue = assembly.GetAppSettingsValue(validKey);
-
-            Assert.AreEqual(expectedAppSettingVlaue, actualAppSettingValue);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(IndexOutOfRangeException))]
-        public void GetAppSettingsValue_InvalidKey_ThrowsException()
-        {
-            var invalidKey = "InvalidSetting";
-
-            var assembly = Assembly.GetExecutingAssembly();
-            assembly.GetAppSettingsValue(invalidKey);
-
-            Assert.Fail();
-        }
+        [TestMethod]yyyyyyyyyyyyyyyyyyyyy
+            yyyyyyyyyyyyyyyyyyyy
     }
 }
