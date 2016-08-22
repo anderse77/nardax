@@ -4,10 +4,11 @@ using System.Reflection;
 
 namespace Nardax
 {
-    //Hello world
-
+    
     public static class AssemblyExtensions
     {
+        //Hitta AppSettings-värden utifrån Assembly.
+
         public static string GetAppSettingsValue(this Assembly assembly, string key)
         {
             var configuration = ConfigurationManager.OpenExeConfiguration(assembly.Location);
