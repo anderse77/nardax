@@ -35,11 +35,22 @@ namespace Nardax.Tests
         }
 
         [TestMethod]
-        public void TruncateRight_ValueIsLarger_TruncateRemovesRightSide()
+        public void RepeatMe()
         {
-            var expected = "1";
+            var expected = "käbbelkäbbelkäbbel";
+            var result = "käbbel".RepeatMe(3);
 
-            var result = _value.TruncateRight(1);
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void RemoveWhiteChars()
+        {
+            var testString = "i \twill \tsurvive\t";
+
+            var result = testString.RemoveWhiteChars();
+
+            var expected = "iwillsurvive";
 
             Assert.AreEqual(expected, result);
         }
@@ -55,10 +66,11 @@ namespace Nardax.Tests
         }
 
         [TestMethod]
-        public void RepeatMe()
+        public void TruncateRight_ValueIsLarger_TruncateRemovesRightSide()
         {
-            var expected = "käbbelkäbbelkäbbel";
-            var result = "käbbel".RepeatMe(3);
+            var expected = "1";
+
+            var result = _value.TruncateRight(1);
 
             Assert.AreEqual(expected, result);
         }
