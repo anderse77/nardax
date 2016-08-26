@@ -35,6 +35,26 @@ namespace Nardax.Tests
         }
 
         [TestMethod]
+        public void TruncateRight_ValueIsSmaller_TruncateRemovesRightSide()
+        {
+            var expected = "123456789";
+
+            var result = _value.TruncateRight(20);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void TruncateRight_ValueIsLarger_TruncateRemovesRightSide()
+        {
+            var expected = "1";
+
+            var result = _value.TruncateRight(1);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
         public void RepeatMe()
         {
             var expected = "käbbelkäbbelkäbbel";
@@ -65,22 +85,20 @@ namespace Nardax.Tests
         }
 
         [TestMethod]
-        public void TruncateRight_ValueIsSmaller_TruncateRemovesRightSide()
+        public void AddCharBetween()
         {
-            var expected = "123456789";
-
-            var result = _value.TruncateRight(20);
-
+            var testString = "abcde";
+            var result = testString.AddCharBetween('-');
+            var expected = "a-b-c-d-e";
             Assert.AreEqual(expected, result);
         }
 
         [TestMethod]
-        public void TruncateRight_ValueIsLarger_TruncateRemovesRightSide()
+        public void AddCharBetween_CheckNull()
         {
-            var expected = "1";
-
-            var result = _value.TruncateRight(1);
-
+            string testString = null;
+            var result = testString.AddCharBetween('-');
+            string expected = null;
             Assert.AreEqual(expected, result);
         }
     }
